@@ -18,7 +18,7 @@ app.use( express.static( 'public' ) );
 app.all( `/${process.env.BOT_ENDPOINT}`, function( req, res ){
 
   
-  
+  //make app name whatever you want your twitter source label to be, 32 character max
   T.post( 'statuses/update', { status: 'You are stuck in the 20th century if you are still tweeting from an iphone' }, function( err, data, response ) {
     if ( err ){
       console.log( 'error!', err );
